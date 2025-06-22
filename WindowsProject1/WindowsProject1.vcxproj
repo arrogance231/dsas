@@ -163,6 +163,9 @@
     <Image Include="small.ico" />
     <Image Include="WindowsProject1.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RENT_RETURN_GUIDE.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -12,9 +12,17 @@ int calculateLateFee(const std::chrono::system_clock::time_point& due,
 }
 
 std::string genreToString(Genre g) {
-    return "Undefined"; // Placeholder
+    switch (g) {
+        case Genre::Action: return "Action";
+        case Genre::Comedy: return "Comedy";
+        case Genre::Drama: return "Drama";
+        default: return "Undefined";
+    }
 }
 
 Genre stringToGenre(const std::string& s) {
-    return Genre::Undefined; // Placeholder
+    if (s == "Action") return Genre::Action;
+    if (s == "Comedy") return Genre::Comedy;
+    if (s == "Drama") return Genre::Drama;
+    return Genre::Undefined;
 }
