@@ -48,6 +48,15 @@
     <ClInclude Include="MainWindow.h">
       <Filter>Header Files\include\gui</Filter>
     </ClInclude>
+    <ClInclude Include="include\gui\LogSignWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gui\CustomerWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gui\MovieInventoryWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp">
@@ -63,6 +72,15 @@
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\LogSignWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CustomerWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\MovieInventoryWindow.cpp">
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
   </ItemGroup>
