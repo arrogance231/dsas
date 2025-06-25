@@ -57,6 +57,12 @@
     <ClInclude Include="include\gui\MovieInventoryWindow.h">
       <Filter>Header Files\include\gui</Filter>
     </ClInclude>
+    <ClInclude Include="RentWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp">
@@ -83,6 +89,12 @@
     <ClCompile Include="src\gui\MovieInventoryWindow.cpp">
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
+    <ClCompile Include="RentWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsProject1.rc">
@@ -98,8 +110,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="RENT_RETURN_GUIDE.md">
-      <Filter>Documentation</Filter>
-    </None>
+    <None Include="RENT_RETURN_GUIDE.md" />
   </ItemGroup>
 </Project>
