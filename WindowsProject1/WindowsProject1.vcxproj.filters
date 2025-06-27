@@ -25,6 +25,12 @@
     <Filter Include="Header Files\include\gui">
       <UniqueIdentifier>{7b9d63ea-c439-45ef-8149-0c57edea35ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Files">
+      <UniqueIdentifier>{b2c3d4e5-f6g7-8901-bcde-f23456789012}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -63,6 +69,9 @@
     <ClInclude Include="SearchWindow.h">
       <Filter>Header Files\include\gui</Filter>
     </ClInclude>
+    <ClInclude Include="include\gui\UserMenuWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp">
@@ -95,6 +104,9 @@
     <ClCompile Include="SearchWindow.cpp">
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
+    <ClCompile Include="src\gui\UserMenuWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsProject1.rc">
@@ -111,5 +123,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="RENT_RETURN_GUIDE.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\**">
+      <Filter>Assets</Filter>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="movies.json" Condition="Exists('movies.json')">
+      <Filter>Data Files</Filter>
+    </None>
+    <None Include="movies.txt" Condition="Exists('movies.txt')">
+      <Filter>Data Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

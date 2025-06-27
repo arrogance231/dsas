@@ -30,6 +30,8 @@ private:
     wxTextCtrl* titleTextCtrl;
     wxChoice* genreChoice;
     wxTextCtrl* copiesTextCtrl;
+    wxTextCtrl* releaseDateTextCtrl;
+    wxTextCtrl* descriptionTextCtrl;
     wxButton* addButton;
     wxButton* editButton;
     wxButton* deleteButton;

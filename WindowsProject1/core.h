@@ -33,7 +33,9 @@ struct Movie {
     std::string title;
     Genre genre;
     int copiesAvailable;
-
+    std::string releaseDate;
+    std::string description;
+    std::string coverImagePath;
     std::queue<int> waitlist; // Customer IDs
 };
 
@@ -72,6 +74,9 @@ public:
     void removeMovie(int movieID);
     Movie* getMovie(int movieID);
     std::vector<Movie> getAllMovies();
+    void loadMoviesFromAssets();
+    void saveMoviesToFile(const std::string& filename);
+    void loadMoviesFromFile(const std::string& filename);
     
     // Rental operations
     void rentMovie(int customerID, int movieID);
@@ -87,6 +92,8 @@ public:
     void saveToFile(const std::string& filename);
     void loadFromFile(const std::string& filename);
 
+    void loadUsersFromAssets();
+
 private:
     std::map<std::string, User> users;
     std::map<int, Customer> customers;
@@ -95,6 +102,10 @@ private:
     User* currentUser = nullptr;
     int nextCustomerID = 1;
     int nextMovieID = 1;
+    
+    // Helper methods for movie loading
+    Genre parseGenreFromString(const std::string& genreStr);
+    std::string getCoverImagePath(const std::string& title, const std::string& genre);
 };
 
 #endif

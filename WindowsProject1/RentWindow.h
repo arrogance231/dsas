@@ -9,32 +9,29 @@
 
 class SearchWindow; // Forward declaration
 
-class RentWindow : public wxFrame {
+class RentWindow : public wxDialog {
 public:
-    RentWindow(wxWindow* parent, SystemManager& systemManager);
+    RentWindow(wxWindow* parent, SystemManager& systemManager, int movieID);
 
 private:
     enum {
         ID_RentBtn = wxID_HIGHEST + 1,
-        ID_ReturnBtn,
-        ID_SearchBtn,
-        ID_UndoBtn
+        ID_SearchBtn
     };
 
     void OnRentMovie(wxCommandEvent& event);
-    void OnReturnMovie(wxCommandEvent& event);
     void OnSearchMovie(wxCommandEvent& event);
-    void OnUndoAction(wxCommandEvent& event);
     void RefreshRentals();
     wxString FormatTimePoint(const std::chrono::system_clock::time_point& tp);
 
     SystemManager& systemManager;
-    wxGrid* rentalsGrid;
-    wxTextCtrl* movieIdCtrl;
+    int selectedMovieID;
+    wxStaticText* movieTitleText;
+    wxStaticText* movieGenreText;
+    wxStaticText* movieReleaseDateText;
+    wxStaticText* movieDescriptionText;
     wxButton* rentBtn;
-    wxButton* returnBtn;
     wxButton* searchBtn;
-    wxButton* undoBtn;
 
     wxDECLARE_EVENT_TABLE();
 };

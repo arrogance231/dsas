@@ -1,0 +1,183 @@
+Movie Inventory
+==============
+
+ID: 1
+Title: Insidious
+Genre: Action
+Copies Available: 3
+Release Date: 2010
+Description: A family moves into a new home, only to discover that their comatose son has become a vessel for malevolent spirits. Paranormal experts help the parents confront a terrifying realm known as The Further.
+Cover Image: assets/🎃 Horror/Insidious.jpg
+-------------------
+
+ID: 2
+Title: The Ritual
+Genre: Action
+Copies Available: 3
+Release Date: 2017
+Description: Four friends hike through a Scandinavian forest in memory of their friend, only to be stalked by an ancient Norse entity. As they unravel the mystery, guilt and grief become as haunting as the creature.
+Cover Image: assets/🎃 Horror/The Ritual.jpg
+-------------------
+
+ID: 3
+Title: Midsommar
+Genre: Action
+Copies Available: 3
+Release Date: 2019
+Description: A grieving woman joins her boyfriend and his friends on a trip to a remote Swedish village for a rare midsummer festival. What begins as a serene cultural retreat soon descends into a disturbing pagan nightmare 
+Cover Image: assets/🎃 Horror/Midsommar.jpg
+-------------------
+
+ID: 4
+Title:  In the Tall Grass
+Genre: Action
+Copies Available: 3
+Release Date: 2019
+Description: After hearing a child’s cry, a brother and sister venture into a field of tall grass—but quickly become trapped by a supernatural force that warps time and space.
+Cover Image: assets/🎃 Horror/ In the Tall Grass.jpg
+-------------------
+
+ID: 5
+Title: Gonjiam: Haunted Asylum
+Genre: Action
+Copies Available: 3
+Release Date: 2018
+Description: A YouTube crew enters an abandoned psychiatric hospital for a live broadcast, only to discover the horrifying legends are very real. Found-footage style intensifies the terror. 
+Cover Image: assets/🎃 Horror/Gonjiam: Haunted Asylum.jpg
+-------------------
+
+ID: 6
+Title: Spirited Away
+Genre: Comedy
+Copies Available: 3
+Release Date: 2001
+Description: Young Chihiro stumbles into a world of spirits and gods. She must find courage and resourcefulness to rescue her parents and return to the human world.
+Cover Image: assets/🌸 Anime/Spirited Away.jpg
+-------------------
+
+ID: 7
+Title: My Neighbor Totoro
+Genre: Comedy
+Copies Available: 3
+Release Date: 1988
+Description: Two young sisters explore their new countryside home and befriend magical forest creatures, including the iconic Totoro, as they await news of their ailing mother.
+Cover Image: assets/🌸 Anime/My Neighbor Totoro.jpg
+-------------------
+
+ID: 8
+Title: Ponyo
+Genre: Comedy
+Copies Available: 3
+Release Date: 2008
+Description: A goldfish named Ponyo longs to become human after forming a bond with a boy named Sosuke. Her transformation unleashes magical chaos on the seaside town.
+Cover Image: assets/🌸 Anime/Ponyo.jpg
+-------------------
+
+ID: 9
+Title: Grave of the Fireflies
+Genre: Comedy
+Copies Available: 3
+Release Date: 1988
+Description: A devastating tale of two siblings struggling to survive during World War II in Japan. Heartbreaking and poignant, it reveals the cost of war through a child’s eyes.
+Cover Image: assets/🌸 Anime/Grave of the Fireflies.jpg
+-------------------
+
+ID: 10
+Title: Whisper of the Heart
+Genre: Comedy
+Copies Available: 3
+Release Date: 1995
+Description: Shizuku, a curious student and avid reader, discovers a mysterious antique shop and is inspired to write her first story—finding love and purpose along the way.
+Cover Image: assets/🌸 Anime/Whisper of the Heart.jpg
+-------------------
+
+ID: 11
+Title: Crazy Beautiful You
+Genre: Drama
+Copies Available: 3
+Release Date: 2015
+Description: A rebellious teenage girl is sent to a medical mission in a remote town, where she meets a charming local boy. As they navigate their differences and family issues, an unexpected love begins to bloom.
+Cover Image: assets/💌 Romance/Crazy Beautiful You.jpg
+-------------------
+
+ID: 12
+Title: My Tomorrow, Your Yesterday
+Genre: Drama
+Copies Available: 3
+Release Date: 2016
+Description: A young man falls in love with a mysterious woman who holds a stunning secret—she lives time in reverse. A tender romance with a bittersweet twist.
+Cover Image: assets/💌 Romance/My Tomorrow, Your Yesterday.jpg
+-------------------
+
+ID: 13
+Title: Hello, Love, Again
+Genre: Drama
+Copies Available: 3
+Release Date: 2023
+Description: Former lovers unexpectedly reconnect after years apart. As past feelings resurface, they must decide if a second chance at love is worth the risk.
+Cover Image: assets/💌 Romance/Hello, Love, Again.jpg
+-------------------
+
+ID: 14
+Title: Love Like the Falling Petals
+Genre: Drama
+Copies Available: 3
+Release Date: 2022
+Description: An aspiring photographer falls for a hairdresser, but their love is tested by a rare illness that causes her to age rapidly. A touching love story with a tragic core.
+Cover Image: assets/💌 Romance/Love Like the Falling Petals.jpg
+-------------------
+
+ID: 15
+Title: Drawing Closer
+Genre: Drama
+Copies Available: 3
+Release Date: 2024
+Description: Two artists, each facing personal battles, form a bond through their creative expressions. As their art evolves, so does their connection.
+Cover Image: assets/💌 Romance/Drawing Closer.jpg
+-------------------
+
+ID: 16
+Title: The Crow
+Genre: Action
+Copies Available: 3
+Release Date: 1994
+Description: After he and his fiancée are murdered, Eric Draven returns from the grave to exact vengeance. A dark, gritty revenge story with a gothic edge.
+Cover Image: assets/🔥 Action - Adventure/The Crow.jpg
+-------------------
+
+ID: 17
+Title: Mission: Impossible – Dead Reckoning Part One
+Genre: Action
+Copies Available: 3
+Release Date: 2023
+Description: Ethan Hunt and his team face their most dangerous mission yet: tracking down a deadly AI weapon before it falls into the wrong hands. High-octane action and espionage.
+Cover Image: assets/🔥 Action - Adventure/Mission: Impossible – Dead Reckoning Part One.jpg
+-------------------
+
+ID: 18
+Title: Now You See Me
+Genre: Action
+Copies Available: 3
+Release Date: 2013
+Description: Four magicians use their skills to pull off heists during their performances—always staying one step ahead of the FBI. A clever blend of magic and mystery.
+Cover Image: assets/🔥 Action - Adventure/Now You See Me.jpg
+-------------------
+
+ID: 19
+Title: Now You See Me 2
+Genre: Action
+Copies Available: 3
+Release Date: 2016
+Description: The illusionists are forced to pull off another impossible heist while being manipulated by a tech magnate. Bigger tricks, more twists, and global stakes.
+Cover Image: assets/🔥 Action - Adventure/Now You See Me 2.jpg
+-------------------
+
+ID: 20
+Title: Cells at Work!
+Genre: Action
+Copies Available: 3
+Release Date: 2018
+Description: An action-packed anime set inside the human body, where anthropomorphic cells battle germs and viruses. It’s educational, thrilling, and surprisingly funny.
+Cover Image: assets/🔥 Action - Adventure/Cells at Work!.jpg
+-------------------
+

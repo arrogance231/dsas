@@ -18,7 +18,7 @@ private:
 
     void OnSearch(wxCommandEvent& event);
     void OnItemSelected(wxListEvent& event);
-    void PopulateResults(const wxString& query);
+    void PopulateResults(const wxString& query, const wxString& genreFilter);
 
     SystemManager& systemManager;
     wxTextCtrl* searchText;

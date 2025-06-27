@@ -11,9 +11,9 @@
 #include <wx/sizer.h>
 #include "../../core.h"
 
-class LogSignWindow : public wxFrame {
+class LogSignWindow : public wxDialog {
 public:
-    LogSignWindow(const wxString& title, SystemManager* sysManager);
+    LogSignWindow(wxWindow* parent, SystemManager* sysManager);
 
 private:
     // GUI elements

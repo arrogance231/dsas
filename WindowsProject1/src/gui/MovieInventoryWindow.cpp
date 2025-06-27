@@ -17,9 +17,11 @@ void MovieInventoryWindow::CreateControls() {
     // Movie List
     movieListCtrl = new wxListCtrl(panel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_REPORT | wxLC_SINGLE_SEL);
     movieListCtrl->AppendColumn("ID", wxLIST_FORMAT_LEFT, 50);
-    movieListCtrl->AppendColumn("Title", wxLIST_FORMAT_LEFT, 300);
-    movieListCtrl->AppendColumn("Genre", wxLIST_FORMAT_LEFT, 150);
-    movieListCtrl->AppendColumn("Copies", wxLIST_FORMAT_LEFT, 100);
+    movieListCtrl->AppendColumn("Title", wxLIST_FORMAT_LEFT, 200);
+    movieListCtrl->AppendColumn("Genre", wxLIST_FORMAT_LEFT, 100);
+    movieListCtrl->AppendColumn("Release Date", wxLIST_FORMAT_LEFT, 100);
+    movieListCtrl->AppendColumn("Copies", wxLIST_FORMAT_LEFT, 80);
+    movieListCtrl->AppendColumn("Description", wxLIST_FORMAT_LEFT, 300);
     mainSizer->Add(movieListCtrl, 1, wxEXPAND | wxALL, 10);
 
     // Input Form
@@ -32,13 +34,19 @@ void MovieInventoryWindow::CreateControls() {
     genreChoice->Append("Comedy");
     genreChoice->Append("Drama");
     copiesTextCtrl = new wxTextCtrl(panel, wxID_ANY, "");
+    releaseDateTextCtrl = new wxTextCtrl(panel, wxID_ANY, "");
+    descriptionTextCtrl = new wxTextCtrl(panel, wxID_ANY, "", wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
     
     formSizer->Add(new wxStaticText(panel, wxID_ANY, "Title:"), 0, wxALIGN_CENTER_VERTICAL);
     formSizer->Add(titleTextCtrl, 1, wxEXPAND);
     formSizer->Add(new wxStaticText(panel, wxID_ANY, "Genre:"), 0, wxALIGN_CENTER_VERTICAL);
     formSizer->Add(genreChoice, 1, wxEXPAND);
+    formSizer->Add(new wxStaticText(panel, wxID_ANY, "Release Date:"), 0, wxALIGN_CENTER_VERTICAL);
+    formSizer->Add(releaseDateTextCtrl, 1, wxEXPAND);
     formSizer->Add(new wxStaticText(panel, wxID_ANY, "Copies:"), 0, wxALIGN_CENTER_VERTICAL);
     formSizer->Add(copiesTextCtrl, 1, wxEXPAND);
+    formSizer->Add(new wxStaticText(panel, wxID_ANY, "Description:"), 0, wxALIGN_CENTER_VERTICAL);
+    formSizer->Add(descriptionTextCtrl, 1, wxEXPAND);
 
     mainSizer->Add(formSizer, 0, wxEXPAND | wxLEFT | wxRIGHT | wxBOTTOM, 10);
 
@@ -73,8 +81,10 @@ void MovieInventoryWindow::PopulateMovieList() {
     for (const auto& movie : movies) {
         long index = movieListCtrl->InsertItem(movieListCtrl->GetItemCount(), wxString::Format(wxT("%i"), movie.id));
         movieListCtrl->SetItem(index, 1, movie.title);
-        movieListCtrl->SetItem(index, 2, genreToString(movie.genre));
-        movieListCtrl->SetItem(index, 3, wxString::Format(wxT("%i"), movie.copiesAvailable));
+        movieListCtrl->SetItem(index, 2, wxString::FromUTF8(genreToString(movie.genre)));
+        movieListCtrl->SetItem(index, 3, movie.releaseDate);
+        movieListCtrl->SetItem(index, 4, wxString::Format(wxT("%i"), movie.copiesAvailable));
+        movieListCtrl->SetItem(index, 5, movie.description);
         movieListCtrl->SetItemData(index, movie.id);
     }
 }

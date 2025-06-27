@@ -43,7 +43,7 @@ void MainWindow::OnManageMovies(wxCommandEvent& event) {
 
 void MainWindow::OnLogout(wxCommandEvent& event) {
     systemManager->logout();
-    LogSignWindow* loginWin = new LogSignWindow("Login or Sign Up", systemManager);
+    LogSignWindow* loginWin = new LogSignWindow(this, systemManager); // Pass 'this' as the parent window
     loginWin->Show();
     Close();
 }
