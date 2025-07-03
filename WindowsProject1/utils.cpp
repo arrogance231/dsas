@@ -26,3 +26,11 @@ Genre stringToGenre(const std::string& s) {
     if (s == "Drama") return Genre::Drama;
     return Genre::Undefined;
 }
+
+// Check if a due date is overdue
+bool isOverdue(const std::chrono::system_clock::time_point& dueDate) {
+    auto now = std::chrono::system_clock::now();
+    return now > dueDate;
+}
+
+

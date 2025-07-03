@@ -334,14 +334,51 @@ void SystemManager::undoLastAction() {
 // Waitlist operations
 void SystemManager::addToWaitlist(int customerID, int movieID) {
     // Implementation needed
+    
+	// QueueWindow
+	//for adding a customer to the waitlist for a movie for when no copies are available
+        Movie* movie = getMovie(movieID);
+        if (!movie) {
+            throw std::runtime_error("Movie not found");
+        }
+        movie->waitlist.push(customerID);
+    
 }
 
 void SystemManager::removeFromWaitlist(int customerID, int movieID) {
     // Implementation needed
+
+    // QueueWindow
+	//for removing a customer from the waitlist for a movie
+        Movie* movie = getMovie(movieID);
+        if (!movie) {
+            throw std::runtime_error("Movie not found");
+        }
+
+        std::queue<int> newQueue;
+        while (!movie->waitlist.empty()) {
+            int id = movie->waitlist.front();
+            movie->waitlist.pop();
+            if (id != customerID) {
+                newQueue.push(id);
+            }
+        }
+        movie->waitlist = newQueue;
+    
+
 }
 
 std::queue<int> SystemManager::getWaitlist(int movieID) {
     // Implementation needed
+
+    // QueueWindow
+	//for getting the waitlist for a movie
+        Movie* movie = getMovie(movieID);
+        if (!movie) {
+            throw std::runtime_error("Movie not found");
+        }
+        return movie->waitlist;
+      
     return std::queue<int>();
 }
 

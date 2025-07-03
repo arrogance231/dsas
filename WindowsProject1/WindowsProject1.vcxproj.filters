@@ -72,6 +72,15 @@
     <ClInclude Include="include\gui\UserMenuWindow.h">
       <Filter>Header Files\include\gui</Filter>
     </ClInclude>
+    <ClInclude Include="QueueWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="OverdueWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="FeeWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp">
@@ -105,6 +114,15 @@
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
     <ClCompile Include="src\gui\UserMenuWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="OverdueWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="FeeWindow.cpp">
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
   </ItemGroup>

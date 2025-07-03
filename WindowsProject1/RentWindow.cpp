@@ -1,5 +1,6 @@
 #include "RentWindow.h"
 #include <wx/msgdlg.h>
+#include "QueueWindow.h" // For QueueWindow usage
 
 wxBEGIN_EVENT_TABLE(RentWindow, wxDialog)
     EVT_BUTTON(ID_RentBtn, RentWindow::OnRentMovie)
@@ -43,16 +44,65 @@ RentWindow::RentWindow(wxWindow* parent, SystemManager& sysMgr, int movieID)
 }
 
 void RentWindow::OnRentMovie(wxCommandEvent& event) {
+    // Check if user is logged in and is a customer
     User* user = systemManager.getCurrentUser();
     if (!user || user->customerID == -1) {
         wxMessageBox("No customer logged in", "Error", wxOK | wxICON_ERROR);
         return;
     }
-    try {
-        systemManager.rentMovie(user->customerID, selectedMovieID);
-        wxMessageBox("Movie rented successfully!", "Success", wxOK | wxICON_INFORMATION);
-        Close();
-    } catch (const std::exception& e) {
-        wxMessageBox(e.what(), "Error", wxOK | wxICON_ERROR);
+
+    // Get the selected movie
+    Movie* movie = systemManager.getMovie(selectedMovieID);
+    if (!movie) {
+        wxMessageBox("Movie not found!", "Error", wxOK | wxICON_ERROR);
+        return;
+    }
+
+    // Check if copies are available
+    if (movie->copiesAvailable > 0) {
+        // Copies are available, proceed to rent
+        try {
+            systemManager.rentMovie(user->customerID, selectedMovieID);
+            wxMessageBox("Movie rented successfully!", "Success", wxOK | wxICON_INFORMATION);
+            Close();
+        }
+        catch (const std::exception& e) {
+            wxMessageBox(e.what(), "Error", wxOK | wxICON_ERROR);
+        }
+    }
+    else {
+        // No copies available, ask to join waitlist
+        int result = wxMessageBox(
+            "No copies available. Would you like to join the waitlist?",
+            "Waitlist Option",
+            wxYES_NO | wxICON_QUESTION
+        );
+
+        if (result == wxYES) {
+            try {
+                systemManager.addToWaitlist(user->customerID, selectedMovieID);
+                wxMessageBox("Added to the waitlist.", "Waitlist", wxOK | wxICON_INFORMATION);
+
+                // Ask if the user wants to view the current waitlist
+                int view = wxMessageBox(
+                    "Do you want to view the current waitlist?",
+                    "View Waitlist",
+                    wxYES_NO | wxICON_QUESTION
+                );
+
+                if (view == wxYES) {
+                    QueueWindow* queueWin = new QueueWindow(this, systemManager, selectedMovieID);
+                    queueWin->ShowModal();
+                    queueWin->Destroy();
+                }
+            }
+            catch (const std::exception& e) {
+                wxMessageBox(e.what(), "Error", wxOK | wxICON_ERROR);
+            }
+
+
+            Close();
+        }
     }
 }
+
