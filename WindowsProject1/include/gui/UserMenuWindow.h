@@ -12,9 +12,11 @@ private:
     wxButton* rentMovieBtn;
     wxButton* returnMovieBtn;
     wxButton* checkRentalsBtn;
+    wxButton* rentalHistoryBtn;
     wxButton* checkInvoiceBtn;
     void OnRentMovie(wxCommandEvent& event);
     void OnReturnMovie(wxCommandEvent& event);
+	void OnRentalHistory(wxCommandEvent& event); // Added for rental history functionality
     void OnCheckRentals(wxCommandEvent& event);
     void OnCheckInvoice(wxCommandEvent& event);
 };

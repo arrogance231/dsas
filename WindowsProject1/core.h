@@ -82,6 +82,10 @@ public:
     void rentMovie(int customerID, int movieID);
     void returnMovie(int customerID, int movieID);
     void undoLastAction();
+
+    // Get rental records
+    std::stack<RentalAction> getUndoStack() const;
+
     
     // Waitlist operations
     void addToWaitlist(int customerID, int movieID);

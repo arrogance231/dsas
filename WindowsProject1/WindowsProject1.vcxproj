@@ -136,14 +136,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="core.h" />
+    <ClInclude Include="CurrentRentalsWindow.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="HistoryWindow.h" />
     <ClInclude Include="include\gui\CustomerWindow.h" />
     <ClInclude Include="include\gui\LogSignWindow.h" />
     <ClInclude Include="include\gui\MovieInventoryWindow.h" />
     <ClInclude Include="include\gui\UserMenuWindow.h" />
     <ClInclude Include="MainWindow.h" />
+    <ClInclude Include="ReceiptDialog.h" />
     <ClInclude Include="RentWindow.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ReturnWindow.h" />
     <ClInclude Include="SearchWindow.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="utils.h" />
@@ -151,9 +155,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core.cpp" />
+    <ClCompile Include="CurrentRentalsWindow.cpp" />
+    <ClCompile Include="HistoryWindow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="ReceiptDialog.cpp" />
     <ClCompile Include="RentWindow.cpp" />
+    <ClCompile Include="ReturnWindow.cpp" />
     <ClCompile Include="SearchWindow.cpp" />
     <ClCompile Include="src\gui\CustomerWindow.cpp" />
     <ClCompile Include="src\gui\LogSignWindow.cpp" />

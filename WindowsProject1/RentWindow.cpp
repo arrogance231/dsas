@@ -1,5 +1,7 @@
 #include "RentWindow.h"
 #include <wx/msgdlg.h>
+#include "ReceiptDialog.h"
+#include <chrono>
 
 wxBEGIN_EVENT_TABLE(RentWindow, wxDialog)
     EVT_BUTTON(ID_RentBtn, RentWindow::OnRentMovie)
@@ -51,6 +53,37 @@ void RentWindow::OnRentMovie(wxCommandEvent& event) {
     try {
         systemManager.rentMovie(user->customerID, selectedMovieID);
         wxMessageBox("Movie rented successfully!", "Success", wxOK | wxICON_INFORMATION);
+
+        // Get the movie and rental info
+        Movie* movie = systemManager.getMovie(selectedMovieID);
+        if (!movie) return;
+
+        // Traverse undo stack to get rent & due dates
+        std::stack<RentalAction> tempStack = systemManager.getUndoStack();
+        std::chrono::system_clock::time_point rentDate, dueDate;
+        bool found = false;
+
+        while (!tempStack.empty()) {
+            RentalAction action = tempStack.top();
+            tempStack.pop();
+
+            if (action.actionType == RentalAction::Rent &&
+                action.record.customerID == user->customerID &&
+                action.record.movieID == selectedMovieID) {
+                rentDate = action.record.rentDate;
+                dueDate = action.record.dueDate;
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            // Show receipt dialog with no return date
+            ReceiptDialog* receipt = new ReceiptDialog(this, *movie, rentDate, dueDate, nullptr);
+            receipt->ShowModal();
+            receipt->Destroy();
+        }
+
         Close();
     } catch (const std::exception& e) {
         wxMessageBox(e.what(), "Error", wxOK | wxICON_ERROR);

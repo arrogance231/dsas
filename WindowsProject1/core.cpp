@@ -244,7 +244,7 @@ void SystemManager::returnMovie(int customerID, int movieID) {
     record.returnDate = std::chrono::system_clock::now();
 
     // Simplified due date calculation (in real system, would lookup actual due date)
-    record.dueDate = record.returnDate - std::chrono::hours(72);
+    record.dueDate = record.returnDate - std::chrono::hours(72); 
 
     // Calculate late fee if applicable
     if (record.returnDate > record.dueDate) {
@@ -331,6 +331,11 @@ void SystemManager::undoLastAction() {
     }
     }
 }
+// Get the current undo stack
+std::stack<RentalAction> SystemManager::getUndoStack() const {
+    return undoStack;
+}
+
 // Waitlist operations
 void SystemManager::addToWaitlist(int customerID, int movieID) {
     // Implementation needed

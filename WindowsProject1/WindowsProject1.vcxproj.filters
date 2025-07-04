@@ -72,6 +72,18 @@
     <ClInclude Include="include\gui\UserMenuWindow.h">
       <Filter>Header Files\include\gui</Filter>
     </ClInclude>
+    <ClInclude Include="ReturnWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrentRentalsWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoryWindow.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceiptDialog.h">
+      <Filter>Header Files\include\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp">
@@ -105,6 +117,18 @@
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
     <ClCompile Include="src\gui\UserMenuWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="ReturnWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="CurrentRentalsWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryWindow.cpp">
+      <Filter>Source Files\src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceiptDialog.cpp">
       <Filter>Source Files\src\gui</Filter>
     </ClCompile>
   </ItemGroup>
