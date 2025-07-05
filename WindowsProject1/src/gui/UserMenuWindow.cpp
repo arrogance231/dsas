@@ -1,6 +1,9 @@
 #include "../../include/gui/UserMenuWindow.h"
 #include "../../SearchWindow.h"
 #include "../../RentWindow.h"
+#include "../../QueueWindow.h"  // For QueueWindow usage
+#include "../../OverdueWindow.h" // For OverdueWindow usage
+#include "../../FeeWindow.h"    // For FeeWindow usage
 #include "../../ReturnWindow.h"
 #include "../../CurrentRentalsWindow.h"
 #include "../../HistoryWindow.h" 
@@ -13,12 +16,18 @@ UserMenuWindow::UserMenuWindow(SystemManager* sysMgr)
 
     rentMovieBtn = new wxButton(panel, wxID_ANY, "Rent Movie");
     returnMovieBtn = new wxButton(panel, wxID_ANY, "Return A Movie");
+    checkQueueBtn = new wxButton(panel, wxID_ANY, "Check Queue/Waitinglist"); //Queue BTN
+	checkOverdueBtn = new wxButton(panel, wxID_ANY, "Check Overdue Movie"); // Overdue Window BTN
+	checkFeeBtn = new wxButton(panel, wxID_ANY, "Check Fee Movie"); // Fee Window BTN
     checkRentalsBtn = new wxButton(panel, wxID_ANY, "Check Current Rentals");
 	rentalHistoryBtn = new wxButton(panel, wxID_ANY, "Rental History"); //Added rental history button
     checkInvoiceBtn = new wxButton(panel, wxID_ANY, "Check Invoice");
 
     sizer->Add(rentMovieBtn, 0, wxEXPAND | wxALL, 10);
     sizer->Add(returnMovieBtn, 0, wxEXPAND | wxALL, 10);
+	sizer->Add(checkQueueBtn, 0, wxEXPAND | wxALL, 10); //Queue BTN
+	sizer->Add(checkOverdueBtn, 0, wxEXPAND | wxALL, 10);  // Overdue Window BTN
+	sizer->Add(checkFeeBtn, 0, wxEXPAND | wxALL, 10); // Fee Window BTN
     sizer->Add(checkRentalsBtn, 0, wxEXPAND | wxALL, 10);
 	sizer->Add(rentalHistoryBtn, 0, wxEXPAND | wxALL, 10);
     sizer->Add(checkInvoiceBtn, 0, wxEXPAND | wxALL, 10);
@@ -28,6 +37,9 @@ UserMenuWindow::UserMenuWindow(SystemManager* sysMgr)
 
     rentMovieBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnRentMovie, this);
     returnMovieBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnReturnMovie, this);
+    checkQueueBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnCheckQueue, this); //Queue BTN
+	checkOverdueBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnCheckOverdue, this); // Overdue Window BTN
+	checkFeeBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnCheckFee, this); // Fee Window BTN
     checkRentalsBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnCheckRentals, this);
 	rentalHistoryBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnRentalHistory, this); 
     checkInvoiceBtn->Bind(wxEVT_BUTTON, &UserMenuWindow::OnCheckInvoice, this);
@@ -65,6 +77,51 @@ void UserMenuWindow::OnReturnMovie(wxCommandEvent& event) {
 
     ReturnWindow* returnWin = new ReturnWindow(systemManager);
     returnWin->Show();
+}
+
+    wxMessageBox("Return A Movie: Not implemented yet.", "Info", wxOK | wxICON_INFORMATION);
+}
+
+//Queue BTN
+void UserMenuWindow::OnCheckQueue(wxCommandEvent& event) {
+    SearchWindow* searchWin = new SearchWindow(this, *systemManager);
+    if (searchWin->ShowModal() == wxID_OK) {
+        int selectedMovieId = searchWin->GetSelectedMovieId();
+        if (selectedMovieId != -1) {
+            QueueWindow* queueWin = new QueueWindow(this, *systemManager, selectedMovieId);
+            queueWin->ShowModal();
+            queueWin->Destroy();
+        }
+    }
+    searchWin->Destroy();
+}
+
+// OVERDUE BTN
+void UserMenuWindow::OnCheckOverdue(wxCommandEvent& event) {
+    SearchWindow* searchWin = new SearchWindow(this, *systemManager);
+    if (searchWin->ShowModal() == wxID_OK) {
+        int selectedMovieId = searchWin->GetSelectedMovieId();
+        if (selectedMovieId != -1) {
+            OverdueWindow* overdueWin = new OverdueWindow(this, *systemManager, selectedMovieId);
+            overdueWin->ShowModal();
+            overdueWin->Destroy();
+        }
+    }
+    searchWin->Destroy();
+}
+
+// FEE BTN
+void UserMenuWindow::OnCheckFee(wxCommandEvent& event) {
+    SearchWindow* searchWin = new SearchWindow(this, *systemManager);
+    if (searchWin->ShowModal() == wxID_OK) {
+        int selectedMovieId = searchWin->GetSelectedMovieId();
+        if (selectedMovieId != -1) {
+            FeeWindow* feeWin = new FeeWindow(this, *systemManager, selectedMovieId);
+            feeWin->ShowModal();
+            feeWin->Destroy();
+        }
+    }
+    searchWin->Destroy();
 }
 
 void UserMenuWindow::OnCheckRentals(wxCommandEvent& event) {
