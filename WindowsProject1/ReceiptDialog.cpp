@@ -1,4 +1,3 @@
-
 #include "ReceiptDialog.h"
 #include "utils.h"
 #include <sstream>
@@ -32,22 +31,35 @@ ReceiptDialog::ReceiptDialog(wxWindow* parent,
     wxStaticText* returnDateText = new wxStaticText(panel, wxID_ANY,
         "Return Date: " + (returnDate ? FormatDate(*returnDate) : "N/A"));
 
-	int baseFee = getPricePerDay(movie.genre); //using utils function to be implemented
-    wxStaticText* rentalFeeText = new wxStaticText(panel, wxID_ANY, "Rental Fee: Php" + std::to_string(baseFee));
+    int pricePerDay = getPricePerDay(movie.genre);
+    int rentalDays = std::chrono::duration_cast<std::chrono::hours>(dueDate - rentDate).count() / 24;
+    if ((std::chrono::duration_cast<std::chrono::hours>(dueDate - rentDate).count() % 24) > 0) rentalDays++;
+    int baseFee = pricePerDay * rentalDays;
+    int lateFee = 0;
+    if (returnDate) {
+        lateFee = calculateLateFee(dueDate, *returnDate);
+    }
+    int total = baseFee + lateFee;
+    int lateDays = 0;
+    if (returnDate && *returnDate > dueDate) {
+        lateDays = std::chrono::duration_cast<std::chrono::hours>(*returnDate - dueDate).count() / 24;
+        if ((std::chrono::duration_cast<std::chrono::hours>(*returnDate - dueDate).count() % 24) > 0) lateDays++;
+    }
+    int lateFeePerDay = static_cast<int>(pricePerDay * 0.3);
 
+    wxStaticText* rentalFeeText = new wxStaticText(panel, wxID_ANY, "Rental Fee: Php" + std::to_string(baseFee));
+    wxStaticText* lateFeeText = new wxStaticText(panel, wxID_ANY, "Late Fee: Php" + std::to_string(lateFee) + (lateDays > 0 ? " (" + std::to_string(lateDays) + " day(s) x " + std::to_string(lateFeePerDay) + ")" : ""));
+    wxStaticText* totalFeeText = new wxStaticText(panel, wxID_ANY, "Total Fee: Php" + std::to_string(total));
+    totalFeeText->SetForegroundColour(*wxRED);
 
     mainSizer->Add(titleText, 0, wxALL, 10);
     mainSizer->Add(genreText, 0, wxALL, 10);
     mainSizer->Add(rentDateText, 0, wxALL, 10);
     mainSizer->Add(dueDateText, 0, wxALL, 10);
     mainSizer->Add(returnDateText, 0, wxALL, 10);
-	mainSizer->Add(rentalFeeText, 0, wxALL, 10);
-
-    if (returnDate && *returnDate > dueDate) {
-		int lateFee = calculateLateFee(dueDate, *returnDate); // using utils function to be implemented
-        wxStaticText* lateFeeText = new wxStaticText(panel, wxID_ANY, "Late Fee: Php" + std::to_string(lateFee));
-        mainSizer->Add(lateFeeText, 0, wxALL, 10);
-    }
+    mainSizer->Add(rentalFeeText, 0, wxALL, 10);
+    mainSizer->Add(lateFeeText, 0, wxALL, 10);
+    mainSizer->Add(totalFeeText, 0, wxALL, 10);
 
     closeButton = new wxButton(panel, wxID_ANY, "Close");
     mainSizer->Add(closeButton, 0, wxALIGN_CENTER | wxALL, 15);

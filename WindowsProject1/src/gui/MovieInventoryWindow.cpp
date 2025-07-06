@@ -102,7 +102,7 @@ void MovieInventoryWindow::OnAdd(wxCommandEvent& event) {
     copiesStr.ToLong(&copies);
 
     Movie newMovie;
-    newMovie.id = systemManager->getAllMovies().size() + 1; // Simple ID generation
+    newMovie.id = systemManager->getAllMovies().empty() ? 1 : systemManager->getAllMovies().back().id + 1;
     newMovie.title = title.ToStdString();
     newMovie.genre = static_cast<Genre>(genreIndex);
     newMovie.copiesAvailable = copies;

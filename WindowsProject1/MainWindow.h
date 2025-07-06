@@ -2,7 +2,7 @@
 #define MAINWINDOW_HPP
 
 #include <wx/wx.h>
-#include "core.h"
+#include "../../core.h"
 
 class MainWindow : public wxFrame {
 public:

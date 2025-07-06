@@ -87,7 +87,7 @@ void CustomerWindow::OnAdd(wxCommandEvent& event) {
     }
 
     Customer newCustomer;
-    newCustomer.id = systemManager->getAllCustomers().size() + 1; // Simple ID generation
+    newCustomer.id = systemManager->getAllCustomers().empty() ? 1 : systemManager->getAllCustomers().back().id + 1;
     newCustomer.name = name.ToStdString();
     newCustomer.phone = phone.ToStdString();
     newCustomer.email = email.ToStdString();

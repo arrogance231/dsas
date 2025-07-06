@@ -4,7 +4,7 @@
 #define RECEIPTDIALOG_H
 
 #include <wx/wx.h>
-#include "core.h"
+#include "../../core.h"
 
 class ReceiptDialog : public wxDialog {
 public:

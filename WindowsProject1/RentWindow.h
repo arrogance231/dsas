@@ -1,7 +1,7 @@
 #ifndef RENTWINDOW_H
 #define RENTWINDOW_H
 
-#include "core.h"
+#include "../../core.h"
 #include <wx/wx.h>
 #include <wx/grid.h>
 #include <wx/sizer.h>

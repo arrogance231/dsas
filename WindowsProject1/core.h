@@ -55,6 +55,7 @@ struct RentalAction {
 
 class SystemManager {
 public:
+    SystemManager();
     // User management
     void addUser(const User& user);
     bool verifyLogin(const std::string& username, const std::string& password);
@@ -79,7 +80,7 @@ public:
     void loadMoviesFromFile(const std::string& filename);
     
     // Rental operations
-    void rentMovie(int customerID, int movieID);
+    void rentMovie(int customerID, int movieID, int rentalDays);
     void returnMovie(int customerID, int movieID);
     void undoLastAction();
 

@@ -1,7 +1,7 @@
 #ifndef SEARCHWINDOW_H
 #define SEARCHWINDOW_H
 
-#include "core.h"
+#include "../../core.h"
 #include <wx/wx.h>
 #include <wx/listctrl.h>
 
