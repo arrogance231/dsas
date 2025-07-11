@@ -1,1 +1,29 @@
- 
+[MOVIES]
+1,Insidious,0,2,2010,A family moves into a new home, only to discover that their comatose son has become a vessel for malevolent spirits. Paranormal experts help the parents confront a terrifying realm known as The Further.,assets/🎃 Horror/Insidious.jpg,WAITLIST:
+2,The Ritual,0,3,2017,Four friends hike through a Scandinavian forest in memory of their friend, only to be stalked by an ancient Norse entity. As they unravel the mystery, guilt and grief become as haunting as the creature.,assets/🎃 Horror/The Ritual.jpg,WAITLIST:
+3,Midsommar,0,3,2019,A grieving woman joins her boyfriend and his friends on a trip to a remote Swedish village for a rare midsummer festival. What begins as a serene cultural retreat soon descends into a disturbing pagan nightmare ,assets/🎃 Horror/Midsommar.jpg,WAITLIST:
+4, In the Tall Grass,0,3,2019,After hearing a child’s cry, a brother and sister venture into a field of tall grass—but quickly become trapped by a supernatural force that warps time and space.,assets/🎃 Horror/ In the Tall Grass.jpg,WAITLIST:
+5,Gonjiam: Haunted Asylum,0,3,2018,A YouTube crew enters an abandoned psychiatric hospital for a live broadcast, only to discover the horrifying legends are very real. Found-footage style intensifies the terror. ,assets/🎃 Horror/Gonjiam: Haunted Asylum.jpg,WAITLIST:
+6,Spirited Away,1,3,2001,Young Chihiro stumbles into a world of spirits and gods. She must find courage and resourcefulness to rescue her parents and return to the human world.,assets/🌸 Anime/Spirited Away.jpg,WAITLIST:
+7,My Neighbor Totoro,1,3,1988,Two young sisters explore their new countryside home and befriend magical forest creatures, including the iconic Totoro, as they await news of their ailing mother.,assets/🌸 Anime/My Neighbor Totoro.jpg,WAITLIST:
+8,Ponyo,1,3,2008,A goldfish named Ponyo longs to become human after forming a bond with a boy named Sosuke. Her transformation unleashes magical chaos on the seaside town.,assets/🌸 Anime/Ponyo.jpg,WAITLIST:
+9,Grave of the Fireflies,1,3,1988,A devastating tale of two siblings struggling to survive during World War II in Japan. Heartbreaking and poignant, it reveals the cost of war through a child’s eyes.,assets/🌸 Anime/Grave of the Fireflies.jpg,WAITLIST:
+10,Whisper of the Heart,1,3,1995,Shizuku, a curious student and avid reader, discovers a mysterious antique shop and is inspired to write her first story—finding love and purpose along the way.,assets/🌸 Anime/Whisper of the Heart.jpg,WAITLIST:
+11,Crazy Beautiful You,2,3,2015,A rebellious teenage girl is sent to a medical mission in a remote town, where she meets a charming local boy. As they navigate their differences and family issues, an unexpected love begins to bloom.,assets/💌 Romance/Crazy Beautiful You.jpg,WAITLIST:
+12,My Tomorrow, Your Yesterday,2,3,2016,A young man falls in love with a mysterious woman who holds a stunning secret—she lives time in reverse. A tender romance with a bittersweet twist.,assets/💌 Romance/My Tomorrow, Your Yesterday.jpg,WAITLIST:
+13,Hello, Love, Again,2,3,2023,Former lovers unexpectedly reconnect after years apart. As past feelings resurface, they must decide if a second chance at love is worth the risk.,assets/💌 Romance/Hello, Love, Again.jpg,WAITLIST:
+14,Love Like the Falling Petals,2,3,2022,An aspiring photographer falls for a hairdresser, but their love is tested by a rare illness that causes her to age rapidly. A touching love story with a tragic core.,assets/💌 Romance/Love Like the Falling Petals.jpg,WAITLIST:
+15,Drawing Closer,2,3,2024,Two artists, each facing personal battles, form a bond through their creative expressions. As their art evolves, so does their connection.,assets/💌 Romance/Drawing Closer.jpg,WAITLIST:
+16,The Crow,0,3,1994,After he and his fiancée are murdered, Eric Draven returns from the grave to exact vengeance. A dark, gritty revenge story with a gothic edge.,assets/🔥 Action - Adventure/The Crow.jpg,WAITLIST:
+17,Mission: Impossible – Dead Reckoning Part One,0,3,2023,Ethan Hunt and his team face their most dangerous mission yet: tracking down a deadly AI weapon before it falls into the wrong hands. High-octane action and espionage.,assets/🔥 Action - Adventure/Mission: Impossible – Dead Reckoning Part One.jpg,WAITLIST:
+18,Now You See Me,0,3,2013,Four magicians use their skills to pull off heists during their performances—always staying one step ahead of the FBI. A clever blend of magic and mystery.,assets/🔥 Action - Adventure/Now You See Me.jpg,WAITLIST:
+19,Now You See Me 2,0,3,2016,The illusionists are forced to pull off another impossible heist while being manipulated by a tech magnate. Bigger tricks, more twists, and global stakes.,assets/🔥 Action - Adventure/Now You See Me 2.jpg,WAITLIST:
+20,Cells at Work!,0,3,2018,An action-packed anime set inside the human body, where anthropomorphic cells battle germs and viruses. It’s educational, thrilling, and surprisingly funny.,assets/🔥 Action - Adventure/Cells at Work!.jpg,WAITLIST:
+[CUSTOMERS]
+1,arro,,,user,ACTIVE:,HISTORY:
+2,arro,,,user,ACTIVE:1,HISTORY:
+[USERS]
+arro,vidarwin123,user,2
+arrochi,vidarwin123,admin,-1
+[UNDO]
+RENT,2,1,1751778514,1752383314,0,0

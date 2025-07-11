@@ -8,16 +8,16 @@ public:
         // Create the system manager
         SystemManager* sysManager = new SystemManager();
 
-        // Load movies from assets or saved file
+        // Load movies from current directory
         sysManager->loadMoviesFromFile("movies.json");
         if (sysManager->getAllMovies().empty()) {
-            // If no saved movies, load from assets
+            // If no saved movies, load from txt
             sysManager->loadMoviesFromAssets();
             // Save to file for future use
             sysManager->saveMoviesToFile("movies.json");
         }
 
-        // Load users and admins from assets
+        // Load users and admins from current directory
         sysManager->loadUsersFromAssets();
 
         // Create and show the login window

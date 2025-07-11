@@ -1,0 +1,184 @@
+{
+  "movies": [
+    {
+  "id": 1,
+  "title": "Insidious",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2010",
+  "description": "A family moves into a new home, only to discover that their comatose son has become a vessel for malevolent spirits. Paranormal experts help the parents confront a terrifying realm known as The Further.",
+  "coverImagePath": "assets/🎃 Horror/Insidious.jpg"
+},
+    {
+  "id": 2,
+  "title": "The Ritual",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2017",
+  "description": "Four friends hike through a Scandinavian forest in memory of their friend, only to be stalked by an ancient Norse entity. As they unravel the mystery, guilt and grief become as haunting as the creature.",
+  "coverImagePath": "assets/🎃 Horror/The Ritual.jpg"
+},
+    {
+  "id": 3,
+  "title": "Midsommar",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2019",
+  "description": "A grieving woman joins her boyfriend and his friends on a trip to a remote Swedish village for a rare midsummer festival. What begins as a serene cultural retreat soon descends into a disturbing pagan nightmare ",
+  "coverImagePath": "assets/🎃 Horror/Midsommar.jpg"
+},
+    {
+  "id": 4,
+  "title": " In the Tall Grass",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2019",
+  "description": "After hearing a child’s cry, a brother and sister venture into a field of tall grass—but quickly become trapped by a supernatural force that warps time and space.",
+  "coverImagePath": "assets/🎃 Horror/ In the Tall Grass.jpg"
+},
+    {
+  "id": 5,
+  "title": "Gonjiam: Haunted Asylum",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2018",
+  "description": "A YouTube crew enters an abandoned psychiatric hospital for a live broadcast, only to discover the horrifying legends are very real. Found-footage style intensifies the terror. ",
+  "coverImagePath": "assets/🎃 Horror/Gonjiam: Haunted Asylum.jpg"
+},
+    {
+  "id": 6,
+  "title": "Spirited Away",
+  "genre": 1,
+  "copiesAvailable": 3,
+  "releaseDate": "2001",
+  "description": "Young Chihiro stumbles into a world of spirits and gods. She must find courage and resourcefulness to rescue her parents and return to the human world.",
+  "coverImagePath": "assets/🌸 Anime/Spirited Away.jpg"
+},
+    {
+  "id": 7,
+  "title": "My Neighbor Totoro",
+  "genre": 1,
+  "copiesAvailable": 3,
+  "releaseDate": "1988",
+  "description": "Two young sisters explore their new countryside home and befriend magical forest creatures, including the iconic Totoro, as they await news of their ailing mother.",
+  "coverImagePath": "assets/🌸 Anime/My Neighbor Totoro.jpg"
+},
+    {
+  "id": 8,
+  "title": "Ponyo",
+  "genre": 1,
+  "copiesAvailable": 3,
+  "releaseDate": "2008",
+  "description": "A goldfish named Ponyo longs to become human after forming a bond with a boy named Sosuke. Her transformation unleashes magical chaos on the seaside town.",
+  "coverImagePath": "assets/🌸 Anime/Ponyo.jpg"
+},
+    {
+  "id": 9,
+  "title": "Grave of the Fireflies",
+  "genre": 1,
+  "copiesAvailable": 3,
+  "releaseDate": "1988",
+  "description": "A devastating tale of two siblings struggling to survive during World War II in Japan. Heartbreaking and poignant, it reveals the cost of war through a child’s eyes.",
+  "coverImagePath": "assets/🌸 Anime/Grave of the Fireflies.jpg"
+},
+    {
+  "id": 10,
+  "title": "Whisper of the Heart",
+  "genre": 1,
+  "copiesAvailable": 3,
+  "releaseDate": "1995",
+  "description": "Shizuku, a curious student and avid reader, discovers a mysterious antique shop and is inspired to write her first story—finding love and purpose along the way.",
+  "coverImagePath": "assets/🌸 Anime/Whisper of the Heart.jpg"
+},
+    {
+  "id": 11,
+  "title": "Crazy Beautiful You",
+  "genre": 2,
+  "copiesAvailable": 3,
+  "releaseDate": "2015",
+  "description": "A rebellious teenage girl is sent to a medical mission in a remote town, where she meets a charming local boy. As they navigate their differences and family issues, an unexpected love begins to bloom.",
+  "coverImagePath": "assets/💌 Romance/Crazy Beautiful You.jpg"
+},
+    {
+  "id": 12,
+  "title": "My Tomorrow, Your Yesterday",
+  "genre": 2,
+  "copiesAvailable": 3,
+  "releaseDate": "2016",
+  "description": "A young man falls in love with a mysterious woman who holds a stunning secret—she lives time in reverse. A tender romance with a bittersweet twist.",
+  "coverImagePath": "assets/💌 Romance/My Tomorrow, Your Yesterday.jpg"
+},
+    {
+  "id": 13,
+  "title": "Hello, Love, Again",
+  "genre": 2,
+  "copiesAvailable": 3,
+  "releaseDate": "2023",
+  "description": "Former lovers unexpectedly reconnect after years apart. As past feelings resurface, they must decide if a second chance at love is worth the risk.",
+  "coverImagePath": "assets/💌 Romance/Hello, Love, Again.jpg"
+},
+    {
+  "id": 14,
+  "title": "Love Like the Falling Petals",
+  "genre": 2,
+  "copiesAvailable": 3,
+  "releaseDate": "2022",
+  "description": "An aspiring photographer falls for a hairdresser, but their love is tested by a rare illness that causes her to age rapidly. A touching love story with a tragic core.",
+  "coverImagePath": "assets/💌 Romance/Love Like the Falling Petals.jpg"
+},
+    {
+  "id": 15,
+  "title": "Drawing Closer",
+  "genre": 2,
+  "copiesAvailable": 3,
+  "releaseDate": "2024",
+  "description": "Two artists, each facing personal battles, form a bond through their creative expressions. As their art evolves, so does their connection.",
+  "coverImagePath": "assets/💌 Romance/Drawing Closer.jpg"
+},
+    {
+  "id": 16,
+  "title": "The Crow",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "1994",
+  "description": "After he and his fiancée are murdered, Eric Draven returns from the grave to exact vengeance. A dark, gritty revenge story with a gothic edge.",
+  "coverImagePath": "assets/🔥 Action - Adventure/The Crow.jpg"
+},
+    {
+  "id": 17,
+  "title": "Mission: Impossible – Dead Reckoning Part One",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2023",
+  "description": "Ethan Hunt and his team face their most dangerous mission yet: tracking down a deadly AI weapon before it falls into the wrong hands. High-octane action and espionage.",
+  "coverImagePath": "assets/🔥 Action - Adventure/Mission: Impossible – Dead Reckoning Part One.jpg"
+},
+    {
+  "id": 18,
+  "title": "Now You See Me",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2013",
+  "description": "Four magicians use their skills to pull off heists during their performances—always staying one step ahead of the FBI. A clever blend of magic and mystery.",
+  "coverImagePath": "assets/🔥 Action - Adventure/Now You See Me.jpg"
+},
+    {
+  "id": 19,
+  "title": "Now You See Me 2",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2016",
+  "description": "The illusionists are forced to pull off another impossible heist while being manipulated by a tech magnate. Bigger tricks, more twists, and global stakes.",
+  "coverImagePath": "assets/🔥 Action - Adventure/Now You See Me 2.jpg"
+},
+    {
+  "id": 20,
+  "title": "Cells at Work!",
+  "genre": 0,
+  "copiesAvailable": 3,
+  "releaseDate": "2018",
+  "description": "An action-packed anime set inside the human body, where anthropomorphic cells battle germs and viruses. It’s educational, thrilling, and surprisingly funny.",
+  "coverImagePath": "assets/🔥 Action - Adventure/Cells at Work!.jpg"
+}
+  ]
+}

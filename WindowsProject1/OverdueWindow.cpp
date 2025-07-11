@@ -96,3 +96,68 @@ void OverdueWindow::PopulateGridForMovie(int movieID) {
         }
     }
 }
+
+// Constructor for viewing overdue rentals for a SPECIFIC user
+OverdueWindow::OverdueWindow(wxWindow* parent, SystemManager& systemManager, int userID, bool forUser)
+    : wxDialog(parent, wxID_ANY, "Your Overdue Rentals", wxDefaultPosition, wxSize(600, 400)),
+    systemManager(systemManager)
+{
+    wxBoxSizer* mainSizer = new wxBoxSizer(wxVERTICAL);
+    grid = new wxGrid(this, wxID_ANY);
+    grid->CreateGrid(0, 4);
+    grid->SetColLabelValue(0, "Movie");
+    grid->SetColLabelValue(1, "Due Date");
+    grid->SetColLabelValue(2, "Status");
+    grid->SetColLabelValue(3, "Late Fee");
+    PopulateGridForUser(userID);
+    mainSizer->Add(grid, 1, wxEXPAND | wxALL, 10);
+    wxButton* closeButton = new wxButton(this, wxID_OK, "Close");
+    mainSizer->Add(closeButton, 0, wxALIGN_CENTER | wxBOTTOM, 10);
+    SetSizer(mainSizer);
+    Centre();
+}
+
+void OverdueWindow::PopulateGridForUser(int userID) {
+    grid->ClearGrid();
+    if (grid->GetNumberRows() > 0) {
+        grid->DeleteRows(0, grid->GetNumberRows());
+    }
+    Customer* customer = systemManager.getCustomer(userID);
+    if (!customer) return;
+    std::queue<int> rentals = customer->activeRentals;
+    while (!rentals.empty()) {
+        int movieID = rentals.front();
+        rentals.pop();
+        Movie* movie = systemManager.getMovie(movieID);
+        if (!movie) continue;
+        // Find the rental record for this customer and movie
+        std::stack<RentalAction> tempStack = systemManager.getUndoStack();
+        std::chrono::system_clock::time_point dueTime;
+        bool found = false;
+        while (!tempStack.empty()) {
+            RentalAction action = tempStack.top();
+            tempStack.pop();
+            if (action.actionType == RentalAction::Rent &&
+                action.record.customerID == userID &&
+                action.record.movieID == movieID) {
+                dueTime = action.record.dueDate;
+                found = true;
+                break;
+            }
+        }
+        if (!found) continue;
+        bool overdue = isOverdue(dueTime);
+        if (!overdue) continue;
+        wxString dueDateStr = wxString(FormatDate(dueTime));
+        wxString status = "Overdue";
+        int lateFee = calculateLateFee(dueTime, std::chrono::system_clock::now());
+        int row = grid->GetNumberRows();
+        grid->AppendRows(1);
+        grid->SetCellValue(row, 0, movie->title);
+        grid->SetCellValue(row, 1, dueDateStr);
+        grid->SetCellValue(row, 2, status);
+        grid->SetCellValue(row, 3, wxString::Format("%d", lateFee));
+        grid->SetCellTextColour(row, 2, *wxRED);
+        grid->SetCellBackgroundColour(row, 2, wxColour(255, 228, 225));
+    }
+}

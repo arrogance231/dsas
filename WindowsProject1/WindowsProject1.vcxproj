@@ -191,11 +191,14 @@
     <None Include="RENT_RETURN_GUIDE.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="movies.json" Condition="Exists('movies.json')" />
-    <None Include="movies.txt" Condition="Exists('movies.txt')" />
+    <Content Include="movies.txt" />
+    <Content Include="movies.json" />
+    <Content Include="customers.txt" />
+    <Content Include="customers.json" />
+    <Content Include="admins.txt" />
+    <Content Include="admins.json" />
+    <Content Include="data.txt" />
+    <Content Include="data.json" />
   </ItemGroup>
   <PropertyGroup>
     <PublishSingleFile>true</PublishSingleFile>
@@ -204,10 +207,6 @@
     <PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\Fody.6.9.2\build\Fody.targets" Condition="Exists('..\packages\Fody.6.9.2\build\Fody.targets')" />
-    <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" />
-  </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>

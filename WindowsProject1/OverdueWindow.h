@@ -14,6 +14,8 @@ public:
 
     //  Constructor to show overdue rentals for a SPECIFIC movie
     OverdueWindow(wxWindow* parent, SystemManager& systemManager, int movieID);
+    // Constructor to show overdue rentals for a SPECIFIC user
+    OverdueWindow(wxWindow* parent, SystemManager& systemManager, int userID, bool forUser);
 
 private:
     SystemManager& systemManager;  // Reference to the system manager (handles data)
@@ -22,6 +24,7 @@ private:
     //  Helper functions to populate the grid
     void PopulateGrid();                // For all overdue rentals
     void PopulateGridForMovie(int movieID);  // For a specific movie
+    void PopulateGridForUser(int userID);    // For a specific user
 };
 
 #endif // End of header guard

@@ -106,18 +106,14 @@ void UserMenuWindow::OnCheckQueue(wxCommandEvent &event)
 // OVERDUE BTN
 void UserMenuWindow::OnCheckOverdue(wxCommandEvent &event)
 {
-    SearchWindow *searchWin = new SearchWindow(this, *systemManager);
-    if (searchWin->ShowModal() == wxID_OK)
-    {
-        int selectedMovieId = searchWin->GetSelectedMovieId();
-        if (selectedMovieId != -1)
-        {
-            OverdueWindow *overdueWin = new OverdueWindow(this, *systemManager, selectedMovieId);
-            overdueWin->ShowModal();
-            overdueWin->Destroy();
-        }
+    User *user = systemManager->getCurrentUser();
+    if (!user || user->role != "user") {
+        wxMessageBox("No user is logged in.", "Error");
+        return;
     }
-    searchWin->Destroy();
+    OverdueWindow *overdueWin = new OverdueWindow(this, *systemManager, user->customerID, true);
+    overdueWin->ShowModal();
+    overdueWin->Destroy();
 }
 
 // FEE BTN
