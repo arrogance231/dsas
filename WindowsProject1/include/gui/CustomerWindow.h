@@ -1,3 +1,4 @@
+// Made by Arjhine A. Ty.
 #ifndef CUSTOMERWINDOW_HPP
 #define CUSTOMERWINDOW_HPP
 
@@ -8,6 +9,7 @@
 #include <wx/msgdlg.h>
 #include "../../core.h"
 
+// Functions made by Arjhine A. Ty
 class CustomerWindow : public wxFrame {
 public:
     CustomerWindow(const wxString& title, SystemManager* sysManager);

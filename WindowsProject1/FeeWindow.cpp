@@ -1,3 +1,4 @@
+// Made by Sam.
 #include "FeeWindow.h"
 #include "utils.h"
 #include <wx/spinctrl.h>

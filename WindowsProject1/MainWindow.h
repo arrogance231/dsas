@@ -4,6 +4,7 @@
 #include <wx/wx.h>
 #include "../../core.h"
 
+// Made by Arjhine A. Ty
 class MainWindow : public wxFrame {
 public:
     MainWindow(const wxString& title, SystemManager* sysManager);

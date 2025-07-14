@@ -1,3 +1,4 @@
+// Made by Arjhine A. Ty.
 #ifndef MOVIEINVENTORYWINDOW_HPP
 #define MOVIEINVENTORYWINDOW_HPP
 
@@ -9,6 +10,7 @@
 #include <wx/choice.h>
 #include "../../core.h"
 
+// Functions made by Arjhine A. Ty
 class MovieInventoryWindow : public wxFrame {
 public:
     MovieInventoryWindow(const wxString& title, SystemManager* sysManager);

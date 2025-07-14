@@ -41,7 +41,6 @@ public:
     
     static bool parseMovie(const std::string& jsonStr, Movie& movie) {
         // Simple JSON parser - this is a basic implementation
-        // In a real application, you'd want a proper JSON library
         std::istringstream iss(jsonStr);
         std::string line;
         
@@ -182,7 +181,6 @@ std::vector<Movie> SystemManager::getAllMovies() {
     return allMovies;
 }
 
-// Rental operations
 // Rental operations
 void SystemManager::rentMovie(int customerID, int movieID, int rentalDays) {
     // Validate customer exists

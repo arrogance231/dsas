@@ -6,6 +6,7 @@
 #include <wx/listctrl.h>
 #include "../../core.h"
 
+// Made by Ram
 class HistoryWindow : public wxFrame {
 public:
     HistoryWindow(SystemManager* sysMgr, int custID);

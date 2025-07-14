@@ -4,6 +4,7 @@
 #include "include/gui/MovieInventoryWindow.h"
 #include "include/gui/LogSignWindow.h"
 
+// Made by Arjhine A. Ty
 MainWindow::MainWindow(const wxString& title, SystemManager* sysManager) 
     : wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(500, 400)), systemManager(sysManager) {
     

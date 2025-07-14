@@ -1,3 +1,4 @@
+// Made by Arjhine A. Ty.
 #ifndef LOGSIGNWINDOW_HPP
 #define LOGSIGNWINDOW_HPP
 
@@ -11,6 +12,7 @@
 #include <wx/sizer.h>
 #include "../../core.h"
 
+//  Functions made by Arjhine A. Ty
 class LogSignWindow : public wxDialog {
 public:
     LogSignWindow(wxWindow* parent, SystemManager* sysManager);

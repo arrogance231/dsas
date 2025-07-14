@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iomanip>
 
+// Made by Ram
 namespace {
     std::string FormatDate(const std::chrono::system_clock::time_point& tp) {
         std::time_t time = std::chrono::system_clock::to_time_t(tp);
@@ -122,7 +123,7 @@ void HistoryWindow::PopulateList() {
             rentalList->SetItem(index, 5, wxString::FromUTF8(FormatDate(r.returnDate.value())));
         }
         else {
-            rentalList->SetItem(index, 5, "—");
+            rentalList->SetItem(index, 5, "ï¿½");
         }
 
         rentalList->SetItem(index, 6, r.status);

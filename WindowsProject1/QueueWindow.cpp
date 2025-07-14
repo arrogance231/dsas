@@ -1,3 +1,4 @@
+// Made by Sam.
 #include "QueueWindow.h"
 
 // Event IDs for controls

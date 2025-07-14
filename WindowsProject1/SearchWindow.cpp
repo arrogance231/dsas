@@ -6,6 +6,7 @@
 #include <wx/listctrl.h>
 #include <wx/colour.h>
 
+// Made by Ezekiel
 wxBEGIN_EVENT_TABLE(SearchWindow, wxDialog)
 EVT_TEXT_ENTER(ID_SearchText, SearchWindow::OnSearch)
 EVT_BUTTON(ID_SearchBtn, SearchWindow::OnSearch)

@@ -1,8 +1,10 @@
+// Made by Arjhine A. Ty.
 #include "../../include/gui/LogSignWindow.h"
 #include "../../SearchWindow.h"
 #include "../../RentWindow.h"
 #include "../../MainWindow.h"
 #include "../../include/gui/UserMenuWindow.h"
+
 LogSignWindow::LogSignWindow(wxWindow* parent, SystemManager* sysManager)
     : wxDialog(parent, wxID_ANY, "Login/Signup", wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER),
       systemManager(sysManager)

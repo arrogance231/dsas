@@ -5,6 +5,7 @@
 #include <wx/wx.h>
 #include <wx/listctrl.h>
 
+// Made by Ezekiel
 class SearchWindow : public wxDialog {
 public:
     SearchWindow(wxWindow* parent, SystemManager& systemManager);

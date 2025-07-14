@@ -6,6 +6,7 @@
 #include <wx/wx.h>
 #include "../../core.h"
 
+// Made by Ram
 class ReceiptDialog : public wxDialog {
 public:
     ReceiptDialog(wxWindow* parent,

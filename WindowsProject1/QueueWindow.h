@@ -1,3 +1,4 @@
+// Made by Sam.
 #ifndef QUEUEWINDOW_H
 #define QUEUEWINDOW_H
 

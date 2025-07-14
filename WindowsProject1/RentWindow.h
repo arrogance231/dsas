@@ -1,3 +1,4 @@
+// Made by Ezekiel.
 #ifndef RENTWINDOW_H
 #define RENTWINDOW_H
 
